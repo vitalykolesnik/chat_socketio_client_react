@@ -1,0 +1,62 @@
+.messages  {
+    padding: 0.5em;
+    width: calc(100vw - 220px);
+}
+
+.messages h3 {
+    color: crimson;
+    padding: 1rem;
+}
+
+.messageList { 
+    overflow-x: hidden; 
+    overflow-y: scroll; 
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin;
+}
+
+.message {
+    margin: 5px 5px;    
+    padding: 5px;
+    box-shadow: 3px 3px 5px grey;
+    color: rgb(105, 89, 89);
+
+}
+
+.sended {
+    color: rgb(152, 64, 64);
+    text-align: end;
+}
+
+.inputMessageForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #e3dada;
+}
+
+.inputMessage {            
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+.inputMessage input {
+    width: 100%;
+}
+
+.inputMessage button {
+    width: 40px;
+    height: 20px;
+}
+
+.typing {
+    height: 30px;
+    padding: 1rem 1rem;
+    color: rgb(12, 116, 53)
+}
+
