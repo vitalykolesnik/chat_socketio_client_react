@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useToken } from "hooks/useToken";
+import s from "components/login.module.scss";
 
 const Login = () => {
   const { handleLogin } = useToken();
@@ -19,10 +20,10 @@ const Login = () => {
   };
 
   return (
-    <div className="loginFormContainer">
-      <div className="loginFormWrapper">
-        <span className="logo">My Chat</span>
-        <span className="title">Login</span>
+    <div className={s.loginFormContainer}>
+      <div className={s.loginFormWrapper}>
+        <span className={s.logo}>My Chat</span>
+        <span className={s.title}>Login</span>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
@@ -40,7 +41,7 @@ const Login = () => {
         </form>
         <p>
           You don't have an account?{" "}
-          <Link className="link" to="/signup">
+          <Link className={s.link} to="/signup">
             Register
           </Link>
         </p>

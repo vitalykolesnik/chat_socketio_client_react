@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSocket } from "hooks/useSocket";
 import { User } from "components/Home/Sidebar/Chats/User/User";
+import s from "components/Home/Sidebar/sidebar.module.scss";
 
 export const Chats = () => {
   const { socket } = useSocket();
@@ -32,6 +33,8 @@ export const Chats = () => {
   ));
 
   return (
-    <div className="chats">{mappedUserList}</div>
+    <div className={s.chats}>
+      {mappedUserList}
+    </div>
   );
 };

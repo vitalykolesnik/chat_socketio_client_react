@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useSocket } from "hooks/useSocket";
 import send from "img/paper-plane-top.png";
 import picture from "img/picture.png";
+import s from "components/Home/Chat/chat.module.scss";
 
 export const Input = () => {
   const [message, setMessage] = useState("");
@@ -23,7 +24,7 @@ export const Input = () => {
   };
 
   return (
-    <div className="messageForm">
+    <div className={s.messageForm}>
       <form onSubmit={handleSendMessage}>
         <input
           name="message"
@@ -31,7 +32,7 @@ export const Input = () => {
           value={message}
           placeholder="Input message here..."
         />
-        <div className="send">
+        <div className={s.send}>
           {message && (
             <button>
               <img src={send} alt="" />

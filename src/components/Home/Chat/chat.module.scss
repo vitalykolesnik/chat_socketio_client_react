@@ -1,0 +1,177 @@
+@import "components/style";
+
+.chat {
+  flex: 2;
+  position: relative;
+  overflow: none;
+
+  .chatInfo {
+    width: 100%;
+    display: flex;
+    position: static;
+    top: 0px;
+    align-items: center;
+    background-color: $COLOR_3;
+    color: white;
+    height: 50px;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 5px;
+
+    span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .info {
+      font-size: 16px;
+    }
+
+    .chatIcons {
+      display: flex;
+      gap: 8px;
+
+      img {
+        height: 25px;
+        width: 25px;
+        object-fit: cover;
+        filter: invert(1);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: $COLOR_5;
+    height: calc(100% - 100px);
+    overflow-x: none;
+    overflow-y: scroll;
+
+    .message {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+      gap: 20px;
+
+      .messageInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        p {
+          color: grey;
+        }
+
+        img {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+        }
+      }
+
+      .messageContent {
+        display: flex;
+        max-width: 80%;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-end;
+
+        p {
+          padding: 10px 20px;
+          background-color: white;
+          border-radius: 0 10px 10px 10px;
+          max-width: max-content;
+        }
+
+        img {
+          position: static;
+          top: 20px;
+          right: 20px;
+          width: 20px;
+          height: 20px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+      }
+
+      &.owner {
+        flex-direction: row-reverse;
+        align-self: flex-end;
+
+        .messageContent {
+          p {
+            background-color: #8a77c5;
+            color: white;
+            border-radius: 10px 0 10px 10px;
+          }
+        }
+      }
+
+      &.pushed {
+        background-color: red;
+      }
+    }
+  }
+
+  .messageForm {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid $COLOR_3;
+    background-color: white;
+
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      padding: 10px;
+
+      input {
+        width: 100%;
+        padding: 10px;
+        height: 50px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #644eab;
+      }
+
+      .send {
+        display: flex;
+        align-items: center;
+        align-content: space-between;
+
+        button {
+          height: 50px;
+          width: 50px;
+          background-color: transparent;
+          border: none;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        img {
+          height: 30px;
+          width: 30px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+
+        button,
+        label {
+          &:hover {
+            transform: scale(1.3);
+            transition: 1s;
+          }
+        }
+      }
+    }
+  }
+}

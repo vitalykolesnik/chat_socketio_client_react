@@ -4,7 +4,6 @@ import {
   Routes,
   Link,
 } from "react-router-dom";
-import "style.scss";
 import Login from "components/Login";
 import Register from "components/Register";
 import Home from "components/Home/Home";

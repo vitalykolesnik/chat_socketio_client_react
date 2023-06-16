@@ -6,6 +6,7 @@ import pencil from "img/pencil.png";
 import phone from "img/phone-call.png";
 import add_user from "img/user-add.png";
 import settings from "img/settings-sliders.png";
+import s from "components/Home/Chat/chat.module.scss";
 
 export const Chat = () => {
   const [isTyping, setIsTyping] = useState(false);
@@ -23,12 +24,12 @@ export const Chat = () => {
   }, [socket, user]);
 
   return (
-    <div className="chat">
-      <div className="chatInfo">
-        <span className="info">
+    <div className={s.chat}>
+      <div className={s.chatInfo}>
+        <span className={s.info}>
           Jerry {isTyping && pencil}
         </span>
-        <div className="chatIcons">
+        <div className={s.chatIcons}>
           <img src={phone} alt="" />
           <img src={add_user} alt="" />
           <img src={settings} alt="" />

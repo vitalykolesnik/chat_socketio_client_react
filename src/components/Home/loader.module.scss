@@ -1,0 +1,11 @@
+@import "components/style";
+
+.loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: $COLOR_1;
+  background-color: white;
+}

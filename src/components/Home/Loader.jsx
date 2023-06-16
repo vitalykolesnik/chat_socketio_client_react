@@ -1,8 +1,9 @@
 import React from "react";
+import s from "components/Home/loader.module.scss";
 
 const Loader = () => {
   return (
-    <div className="loader">Connecting ...</div>
+    <div className={s.loader}>Connecting ...</div>
   );
 };
 

@@ -5,6 +5,7 @@ import {
 } from "react";
 import { useSocket } from "hooks/useSocket";
 import { Message } from "components/Home/Chat/Messages/Message/Message";
+import s from "components/Home/Chat/chat.module.scss";
 
 export const Messages = () => {
   const { socket } = useSocket();
@@ -55,7 +56,7 @@ export const Messages = () => {
   );
 
   return (
-    <div className="messages" ref={list}>
+    <div className={s.messages} ref={list}>
       {mappedMessagesList}
     </div>
   );
